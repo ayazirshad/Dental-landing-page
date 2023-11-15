@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body class="bg-gray-50">
+    <div class="h-full">
+      <section class="cover overflow-hidden w-full h-full">
+        <img
+          src="./images/bg-main2.png"
+          alt="bg"
+          class="absolute overflow-hidden h-full w-full rounded-br-[100px] bg-cover object-cover opacity-90"
+        />
+        <div class="hidden lg:block">
+          <div
+            class="relative flex justify-between border-b border-gray-300 mx-20 xl:mx-40 py-1 sm:visible"
+          >
+            <ul class="flex items-center">
+              <img
+                src="./images/loc-iocn.png"
+                alt="location"
+                class="h-9 py-2"
+              />
+              <span class="font-serif text-white text-sm ml-2"
+                >1985 Kerry Way, Whittier, CA, USA</span
+              >
+              <img
+                src="./images/phone-removebg-preview.png"
+                alt="contact"
+                class="h-9 py-2 ml-5"
+              />
+              <span class="font-serif text-white text-sm ml-2"
+                >+1 562-789-1935</span
+              >
+            </ul>
+            <ul class="flex items-center space-x-6 mr-0">
+              <a href="">
+                <!-- <i class="fa fa-address-book" aria-hidden="true"></i> -->
+                <img src="./images/fb-icon.png" alt="fb" class="h-7" />
+              </a>
+              <a href="">
+                <img
+                  src="./images/twitter-removebg-preview.png"
+                  alt="twitter"
+                  class="h-5"
+                />
+              </a>
+              <a href="">
+                <img src="./images/insta-iconc.png" alt="insta" class="h-5" />
+              </a>
+              <a href="">
+                <img
+                  src="./images/yt-icon-removebg-preview.png"
+                  alt="yt"
+                  class="h-7"
+                />
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="relative px-5 sm:px-10 lg:px-20 xl:px-40 py-6 flex items-center justify-between"
+        >
+          <h1
+            class="font-serif text-white text-2xl font-extrabold hover:text-gray-100 hover:cursor-pointer"
+          >
+            DentalPro
+          </h1>
+          <nav>
+            <ul class="flex space-x-7 items-center">
+              <div class="md:hidden" id="hamburger" onclick="hanldeSideMenu()">
+                <img
+                  src="./images/menu-icon-png-3-lines-5.jpg"
+                  alt=""
+                  class="h-7 cursor-pointer"
+                />
+              </div>
+              <a
+                href="#about"
+                class="font-serif text-white text-md hidden lg:block hover:text-gray-200"
+                >About Us</a
+              >
+              <a
+                href="#treatments"
+                class="font-serif text-white text-md hidden md:block hover:text-gray-200"
+                >Treatments</a
+              >
+              <a
+                href="#testimonial"
+                class="font-serif text-white text-md hidden md:block hover:text-gray-200"
+                >Testimonials</a
+              >
+              <a
+                href="#about"
+                class="font-serif text-white text-md hidden lg:block hover:text-gray-200"
+                >Blog</a
+              >
+              <a
+                href="#contact"
+                class="font-serif text-white text-md hidden md:block hover:text-gray-200"
+                >Contact Us</a
+              >
+              <button
+                class="font-serif text-white text-md px-4 py-2 border border-white hover:bg-[#70A8CF] active:bg-[#79B0D8] rounded-md hidden md:block"
+              >
+                <a href="/">Book Appointment</a>
+              </button>
+            </ul>
+          </nav>
+          <div
+            id="side-menu"
+            class="md:hidden -right-full z-50 transition-all duration-300 absolute bg-blue-300 bg-opacity-25 backdrop-blur-xl flex flex-col top-20 w-full py-5"
+          >
+            <a
+              href="#about"
+              onclick="closeMenu()"
+              class="font-serif text-white text-md hover:bg-blue-300 hover:bg-opacity-25 hover:backdrop-blur-xl py-3 text-center"
+              >About Us</a
+            >
+            <a
+              href="#treatments"
+              onclick="closeMenu()"
+              class="font-serif text-white text-md hover:bg-blue-300 hover:bg-opacity-25 hover:backdrop-blur-xl py-3 text-center"
+              >Treatments</a
+            >
+            <a
+              href="#testimonial"
+              onclick="closeMenu()"
+              class="font-serif text-white text-md hover:bg-blue-300 hover:bg-opacity-25 hover:backdrop-blur-xl py-3 text-center"
+              >Testimonials</a
+            >
+            <a
+              href="#about"
+              onclick="closeMenu()"
+              class="font-serif text-white text-md hover:bg-blue-300 hover:bg-opacity-25 hover:backdrop-blur-xl py-3 text-center"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              onclick="closeMenu()"
+              class="font-serif text-white text-md hover:bg-blue-300 hover:bg-opacity-25 hover:backdrop-blur-xl py-3 text-center"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+
+        <div class="relative mx-5 sm:mx-10 lg:mx-20 xl:mx-40 mt-20 md:mt-12">
+          <h1
+            class="font-serif text-white text-3xl font-extrabold mb-6 md:text-4xl xl:hidden"
+          >
+            A better life starts with a beautiful smile.
+          </h1>
+          <h1
+            class="hidden font-serif text-white text-6xl font-extrabold mb-6 xl:block"
+          >
+            A better life <br />
+            starts with a <br />
+            beautiful smile.
+          </h1>
+          <span class="font-serif text-white text-lg md:text-xl xl:hidden"
+            >Welcome to the Dentist Office of Dr. Thomas Dooley, where trust and
+            comfort are priorities.</span
+          >
+          <span class="hidden font-serif text-white text-2xl xl:block"
+            >Welcome to the Dentist Office of Dr. Thomas <br />
+            Dooley, where trust and comfort are priorities.</span
+          >
+          <button
+            class="font-serif text-white text-md px-6 py-3 rounded-md block bg-[#38B2AC] hover:bg-[#32a09a] active:bg-[#38B2AC] mt-6 xl:mt-8"
+          >
+            <a href="/">Book Appointment</a>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- our clinic section  -->
+
+    <section id="about">
+      <div
+        class="mt-72 sm:mt-80 xl:mt-36 md:flex mx-4 sm:mx-10 lg:mx-20 xl:mx-40 pt-10"
+      >
+        <div class="md:mr-10">
+          <h5 class="font-serif text-base uppercase">our clinic</h5>
+          <h1 class="font-serif text-3xl font-bold mt-5">
+            Welcome to the Dentist Office of Dr. Thomas Dooley
+          </h1>
+          <h5 class="font-serif text-lg mt-5">
+            Excellence in Dentistry in the Heart of NY
+          </h5>
+          <p class="font-serif text-base mt-5">
+            Donec convallis sollicitudin facilisis. Integer nisl ligula,
+            accumsan non tincidunt ac, imperdiet in enim. Donec efficitur
+            ullamcorper metus, eu venenatis nunc. Nam eget neque tempus, mollis
+            sem a, faucibus mi.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex mt-5 md:mt-0">
+            <img
+              src="./images/blue-point-removebg-preview.png"
+              alt="point"
+              class="h-20"
+            />
+            <div>
+              <h1 class="font-serif text-xl font-bold ml-7">
+                Everything You Need Under One Roof
+              </h1>
+              <p class="font-serif text-base mt-5 ml-7">
+                Our comprehensive services allow you to receive all needed
+                dental care right here in our state-of-art office - from dental
+                cleanings and fillings to dental implants and extractions.
+              </p>
+            </div>
+          </div>
+          <div class="flex mt-10">
+            <img
+              src="./images/blue-point-removebg-preview.png"
+              alt="point"
+              class="h-20"
+            />
+            <div>
+              <h1 class="font-serif text-xl font-bold ml-7">
+                Everything You Need Under One Roof
+              </h1>
+              <p class="font-serif text-base mt-5 ml-7">
+                Our comprehensive services allow you to receive all needed
+                dental care right here in our state-of-art office - from dental
+                cleanings and fillings to dental implants and extractions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section  -->
+
+    <section id="treatments" class="py-5">
+      <div
+        class="mx-4 sm:mx-10 lg:mx-20 xl:mx-40 flex flex-col md:flex-row md:space-x-8 my-24"
+      >
+        <div
+          class="h-80 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 bg-white flex flex-col items-center w-full p-5"
+        >
+          <img src="./images/tooth-icon.jpg" alt="tooth" class="h-24" />
+          <h1 class="font-serif text-xl font-bold mt-1 text-center">
+            Teeth Whitening
+          </h1>
+          <span class="font-serif text-base mt-4 text-center"
+            >Let us show you how our experience.</span
+          >
+          <a href="" class="font-serif text-base my-4 hover:underline"
+            >Read more</a
+          >
+        </div>
+        <div
+          class="h-80 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 mt-3 md:mt-0 bg-white flex flex-col items-center w-full p-5"
+        >
+          <img
+            src="./images/oral-icon-removebg-preview.png"
+            alt="oral"
+            class="h-20"
+          />
+          <h1 class="font-serif text-xl font-bold mt-4 text-center">
+            Oral Surgery
+          </h1>
+          <span class="font-serif text-base mt-4 text-center"
+            >Let us show you how our experience.</span
+          >
+          <a href="" class="font-serif text-base my-4 hover:underline"
+            >Read more</a
+          >
+        </div>
+        <div
+          class="h-80 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 mt-3 md:mt-0 bg-white flex flex-col items-center w-full p-5"
+        >
+          <img src="./images/painless.png" alt="pain" class="h-20" />
+          <h1 class="font-serif text-xl font-bold mt-4 text-center">
+            Painless Dentistry
+          </h1>
+          <span class="font-serif text-base mt-4 text-center"
+            >Let us show you how our experience.</span
+          >
+          <a href="" class="font-serif text-base my-4 hover:underline"
+            >Read more</a
+          >
+        </div>
+        <div
+          class="h-80 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 mt-3 md:mt-0 bg-white flex flex-col items-center w-full p-5"
+        >
+          <img
+            src="./images/Periodontics.png"
+            alt="periodontics"
+            class="h-20"
+          />
+          <h1 class="font-serif text-xl font-bold mt-4 text-center">
+            Periodontics
+          </h1>
+          <span class="font-serif text-base mt-4 text-center"
+            >Let us show you how our experience.</span
+          >
+          <a href="" class="font-serif text-base my-4 hover:underline"
+            >Read more</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="px-4 sm:px-10 lg:px-20 xl:px-40 flex flex-col md:flex-row md:space-x-14 py-28 bg-white"
+      id="testimonial"
+    >
+      <div class="md:w-1/2">
+        <h5 class="font-serif text-base uppercase">PATIENT TESTIMONIALS</h5>
+        <h1 class="font-serif text-3xl font-bold mt-5">
+          Why choose the Mesothelioma Center?
+        </h1>
+        <p class="font-serif text-base mt-5">
+          Aenean ut tellus tellus. Suspendisse potenti. Nullam tincidunt lacus
+          tellus, sed aliquam est vehicula a. Pellentesque consectetur
+          condimentum nulla, eleifend condimentum purus vehicula in. Donec
+          convallis sollicitudin facilisis. Integer nisl ligula, accumsan non
+          tincidunt ac, imperdiet in enim. Donec efficitur ullamcorper metus, eu
+          venenatis nunc. Nam eget neque tempus, mollis sem a, faucibus mi.
+        </p>
+      </div>
+      <div class="md:w-1/2 mt-3 md:mt-0">
+        <div class="bg-gray-300 rounded-xl h-80"></div>
+        <div class="text-right font-serif text-sm italic">
+          Aenean ante nisi, gravida non mattis semper.
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="contact"
+      class="px-4 sm:px-10 lg:px-20 xl:px-40 bg-gradient-to-r from-blue-600 to-teal-600 flex flex-row items-center justify-center py-10"
+    >
+      <span class="font-serif text-xl font-bold text-white text-center"
+        >Get in touch with us today! Call us on: +1 562-789-1935</span
+      >
+      <button
+        class="font-serif text-teal-700 font-bold text-md ml-10 px-6 py-3 rounded-md block bg-white hover:text-teal-600 active:bg-gray-100"
+      >
+        <a href="/">Book Appointment</a>
+      </button>
+    </div>
+
+    <div
+      class="px-4 sm:px-10 lg:px-20 xl:px-40 flex flex-col md:flex-row md:space-x-14 py-28 bg-[#1A202C] text-white"
+    >
+      <div class="w-full md:w-1/4 lg:w-2/6">
+        <h1 class="font-serif text-white text-2xl font-extrabold">DentalPro</h1>
+        <span class="font-serif text-sm mt-4 text-center text-[#CBCCDA]"
+          >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy.</span
+        >
+        <span class="font-serif text-xs mt-7 block text-[#718096] uppercase"
+          >SUBSCRIBE FOR OUR NEWSLETTER</span
+        >
+        <div class="">
+          <form action="">
+            <div class="flex items-center mt-2 rounded-md">
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                class="font-serif outline-none focus:outline-none text-black bg-gray-100 text-md rounded-l-md px-3 py-2.5 w-full"
+              />
+              <button
+                class="font-serif text-white text-sm px-3 py-3 block rounded-r-md bg-[#38B2AC] hover:bg-[#32a09a] active:bg-[#38B2AC]"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="w-full md:w-1/4 lg:w-1/6 mt-7 md:mt-0">
+        <span class="font-serif text-lg block">TREATMENTS</span>
+        <a href="" class="font-serif text-sm mt-4 block">General Dentistry</a>
+        <a href="" class="font-serif text-sm mt-4 block">Cosmetic Dentistry</a>
+        <a href="" class="font-serif text-sm mt-4 block">Oral Health</a>
+      </div>
+      <div class="w-full md:w-1/4 lg:w-2/6 mt-7 md:mt-0">
+        <h1 class="font-serif text-lg block">CONTACT DETAILS</h1>
+        <div class="flex flex-row items-center mt-2">
+          <img src="./images/loc-iocn.png" alt="loc" class="h-9 py-2" />
+          <span class="font-serif text-white text-sm ml-4"
+            >1985 Kerry Way, Whittier, CA, USA</span
+          >
+        </div>
+        <div class="flex flex-row items-center mt-2">
+          <img
+            src="./images/phone-removebg-preview.png"
+            alt="contact"
+            class="h-9 py-2"
+          />
+          <span class="font-serif text-white text-sm ml-4"
+            >+1 562-789-1935</span
+          >
+        </div>
+        <div class="flex flex-row items-center mt-2">
+          <img
+            src="./images/clock-removebg-preview.png"
+            alt="clock"
+            class="h-9 py-2"
+          />
+          <span class="font-serif text-white text-sm ml-4"
+            >Mon - Fri: 9:00 - 19:00 <br />
+            Closed on Weekends</span
+          >
+        </div>
+        <div class="flex flex-row items-center mt-2">
+          <img
+            src="./images/email-removebg-preview.png"
+            alt="email"
+            class="h-10 py-2"
+          />
+          <span class="font-serif text-white text-sm ml-4"
+            >dentalpro@example.com</span
+          >
+        </div>
+      </div>
+      <div class="w-full md:w-1/4 lg:w-1/6 mt-7 md:mt-0">
+        <h1 class="font-serif text-lg block">WE'RE SOCIAL</h1>
+        <ul class="flex items-center space-x-4 mr-0 w-full">
+          <a href="">
+            <img src="./images/fb-icon.png" alt="fb" class="h-7" />
+          </a>
+          <a href="">
+            <img
+              src="./images/twitter-removebg-preview.png"
+              alt="twitter"
+              class="h-5"
+            />
+          </a>
+          <a href="">
+            <img src="./images/insta-iconc.png" alt="insta" class="h-5" />
+          </a>
+          <a href="">
+            <img
+              src="./images/yt-icon-removebg-preview.png"
+              alt="yt"
+              class="h-7"
+            />
+          </a>
+        </ul>
+        <p class="mt-10 text-sm font-serif text-[#CBCCDA]">
+          <span>&copy;</span> 2018 ProDentists. <br class="hidden lg:block" />
+          All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const hanldeSideMenu = () => {
+      let sideMenu = document.getElementById("side-menu");
+      let hamburgerMenu = document.getElementById("hamburger");
+      hamburgerMenu.classList.toggle("active");
+      if (hamburgerMenu.classList.contains("active")) {
+        sideMenu.classList.remove("-right-full");
+        sideMenu.classList.add("right-0");
+      } else {
+        sideMenu.classList.remove("right-0");
+        sideMenu.classList.add("-right-full");
+      }
+    };
+    const closeMenu = () => {
+      let sideMenu = document.getElementById("side-menu");
+      let hamburgerMenu = document.getElementById("hamburger");
+      if (sideMenu.classList.contains("right-0")) {
+        sideMenu.classList.remove("right-0");
+        sideMenu.classList.add("-right-full");
+        if (hamburgerMenu.classList.contains("active")) {
+          hamburgerMenu.classList.remove("active");
+        }
+      }
+    };
+  </script>
+</html>
